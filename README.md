@@ -8,7 +8,39 @@ designed. Please note this example uses and requires Java 8 to work.
 ![Addressbook Screenshot](addressbook_screenshot.png "Addressbook Screenshot")
 
 
-Running the example from the command line
+Build Project(Using Apache Maven)
+-------------------
+## Check version of Apache Maven
+```
+$ mvn --version
+```
+
+## Clean old version of Project output
+```
+$ mvn clean
+```
+
+## Build Project(compile, test, package)
+```
+$ mvn compile
+$ mvn test
+$ mvn package
+```
+
+Running using Command line(Using Tomcat Server)
+-------------------
+```
+$ mvn install tomcatVERSION:deploy
+```
+OR
+
+### using CP
+
+```
+$ cp target/addressbook*.war /var/lib/tomcatVERSION/webapps
+```
+
+Running using Command line(Using jetty Server)
 -------------------
 ```
 $ mvn jetty:run
